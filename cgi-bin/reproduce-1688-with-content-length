@@ -1,0 +1,10 @@
+#!/bin/bash
+x=''
+x+=$'Foo: foo\r\n'
+x+=$'Connection: close\r\n'
+x+=$'Bar: bar\r\n'
+x+=$'Content-Length: 9\r\n'
+x+=$'\r\n'
+x+=$'{{body}}\n'
+
+printf '%s' "${x}"
